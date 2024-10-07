@@ -1,0 +1,6 @@
+@PruebaNET_SimónArias_HostAddress = http://localhost:5124
+
+GET {{PruebaNET_SimónArias_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
