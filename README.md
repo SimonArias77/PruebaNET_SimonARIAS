@@ -44,3 +44,18 @@ Clonar el repositorio
 Crear una rama para tu contribución
 Realizar los cambios necesarios
 Enviar un pull request
+
+CREDENCIALES BASE DE DATOS Y JWT:
+
+# Variables para poner las credenciales de la base de datos.
+DB_HOST = bdujnmwqeifcmgwmflzh-mysql.services.clever-cloud.com
+DB_PORT = 3306
+DB_DATABASE = bdujnmwqeifcmgwmflzh
+DB_USERNAME = ul48r5muyxjdxrim
+DB_PASSWORD = nM1wRTKrnxCg0FEZQFyw
+
+#Variables para poner las configuraciones del JWT
+JWT_KEY = llavesita757575jfeiofje8474576ff898hw3e73hdfv08r8ghvefhe8fj884375vunf8e88h85
+JWT_ISSUER = http://localhost:5116
+JWT_AUDIENCE = public
+JWT_EXPIREMINUTES = 60

@@ -12,6 +12,12 @@ namespace PruebaNET_SimónArias.Services;
 public class GuestServices : IGuestRepository
 {
     private readonly ApplicationDbContext _context;
+
+    public GuestServices(ApplicationDbContext context)
+    {
+        _context = context;
+    }
+
     public async Task Add(Guest guest)
     {
         await _context.Guests.AddAsync(guest);

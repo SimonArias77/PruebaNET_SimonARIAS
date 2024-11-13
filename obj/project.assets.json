@@ -7692,11 +7692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/riwip5-006/C#/WEB API SERVICES/PruebaNETT_SimonArias/PruebaNET_SimónArias.csproj",
+      "projectUniqueName": "/home/riwip5-006/C#/WEB API SERVICES/PruebaNET_SimonArias/PruebaNET_SimónArias.csproj",
       "projectName": "PruebaNET_SimónArias",
-      "projectPath": "/home/riwip5-006/C#/WEB API SERVICES/PruebaNETT_SimonArias/PruebaNET_SimónArias.csproj",
+      "projectPath": "/home/riwip5-006/C#/WEB API SERVICES/PruebaNET_SimonArias/PruebaNET_SimónArias.csproj",
       "packagesPath": "/home/riwip5-006/.nuget/packages/",
-      "outputPath": "/home/riwip5-006/C#/WEB API SERVICES/PruebaNETT_SimonArias/obj/",
+      "outputPath": "/home/riwip5-006/C#/WEB API SERVICES/PruebaNET_SimonArias/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/riwip5-006/.nuget/NuGet/NuGet.Config"
@@ -7777,7 +7777,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.108/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

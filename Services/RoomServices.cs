@@ -12,6 +12,12 @@ namespace PruebaNET_SimónArias.Services;
 public class RoomServices : IRoomRepository
 {
     private readonly ApplicationDbContext _context;
+
+    public RoomServices(ApplicationDbContext context)
+    {
+        _context = context;
+    }
+
     public async Task Add(Room room)
     {
         await _context.Rooms.AddAsync(room);

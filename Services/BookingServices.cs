@@ -12,6 +12,12 @@ namespace PruebaNET_SimónArias.Services
     public class BookingServices : IBookingRepository
     {
         private readonly ApplicationDbContext _context;
+
+        public BookingServices(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
         public async Task Add(Booking booking)
         {
             await _context.Bookings.AddAsync(booking);

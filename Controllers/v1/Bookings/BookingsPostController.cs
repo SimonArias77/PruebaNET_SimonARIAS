@@ -19,7 +19,7 @@ public class BookingsPostController : BookingsController
     }
 
     [HttpPost]
-    [Authorize]
+   // [Authorize] //con esta etiqueta hacemos que el endpoint requiera loguearse para poderlo utilizar. Si la quitamos, podremos trabajar el endpoint sin loguearme
 
     public async Task<IActionResult> AddOrderProduct(Booking booking)
     {
