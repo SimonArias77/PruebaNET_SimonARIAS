@@ -9,14 +9,9 @@ using PruebaNET_SimónArias.Repositories;
 
 namespace PruebaNET_SimónArias.Services;
 
-public class EmployeeServices : IEmployeeRepository
+public class EmployeeServices(ApplicationDbContext context) : IEmployeeRepository
 {
-    private readonly ApplicationDbContext _context;
-
-    public EmployeeServices(ApplicationDbContext context)
-    {
-        _context = context;
-    }
+    private readonly ApplicationDbContext _context = context;
 
     public async Task Add(Employee employee)
     {

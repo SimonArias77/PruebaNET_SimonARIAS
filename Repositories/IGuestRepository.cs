@@ -11,6 +11,7 @@ public interface IGuestRepository
     Task<IEnumerable<Guest>> GetAll();
     Task<Guest> GetById(int id);
     Task<Guest> GetByEmail(string? email);
+    Task<IEnumerable<Guest>> GetByKeyword(string keyword);  // New method to search guests by keyword
     Task Add(Guest guest);
     Task Update(Guest guest);
     Task Delete(int id);

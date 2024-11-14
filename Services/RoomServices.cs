@@ -9,14 +9,9 @@ using PruebaNET_SimónArias.Repositories;
 
 namespace PruebaNET_SimónArias.Services;
 
-public class RoomServices : IRoomRepository
+public class RoomServices(ApplicationDbContext context) : IRoomRepository
 {
-    private readonly ApplicationDbContext _context;
-
-    public RoomServices(ApplicationDbContext context)
-    {
-        _context = context;
-    }
+    private readonly ApplicationDbContext _context = context;
 
     public async Task Add(Room room)
     {
@@ -49,9 +44,33 @@ public class RoomServices : IRoomRepository
         return await _context.Rooms.FindAsync(id);
     }
 
+    public async Task<Room> GetAvailable()
+    {
+        return await _context.Rooms.FirstOrDefaultAsync(r => r.Status == "Available");
+    }
+    public async Task<Room> GetOccupied()
+    {
+        return await _context.Rooms.FirstOrDefaultAsync(r => r.Status == "Occupied");
+    }
+    public async Task<object> GetStatus()
+    {
+        var status = new
+        {
+            Available = await GetAvailable(),
+            Occupied = await GetOccupied(),
+            Total = await _context.Rooms.CountAsync()
+        };
+        return status;
+    }
+
     public async Task Update(Room room)
     {
         _context.Entry(room).State = EntityState.Modified;
         await _context.SaveChangesAsync();
+    }
+
+    Task<Room> IRoomRepository.GetStatus()
+    {
+        throw new NotImplementedException();
     }
 }

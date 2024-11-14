@@ -10,6 +10,10 @@ public interface IRoomRepository
 {
     Task<IEnumerable<Room>> GetAll();
     Task<Room> GetById(int id);
+    Task<Room> GetAvailable();
+    Task<Room> GetOccupied();
+    Task<Room> GetStatus();
+
     Task Add(Room room);
     Task Update(Room room);
     Task Delete(int id);

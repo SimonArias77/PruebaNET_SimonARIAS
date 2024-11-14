@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PruebaNET_SimónArias.Models;
 using PruebaNET_SimónArias.Repositories;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace PruebaNET_SimónArias.Controllers.v1.Guests;
 
@@ -19,7 +20,11 @@ public class GuestsPostController : GuestsController
     }
 
     [HttpPost]
-    [Authorize]
+    //[Authorize]
+    [SwaggerOperation(
+            Summary = "Create a new guest",
+            Description = "Registers a new guest with the provided details."
+        )]
 
     public async Task<IActionResult> AddCustomer(Guest guest)
     {

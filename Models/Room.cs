@@ -33,6 +33,11 @@ public class Room
     [Required]
     public bool Availability { get; set; }
 
+    [Column("status")]
+    [MaxLength(10)]
+    [Required]
+    public string? Status { get; set; }
+
     [Column("max_ocupancy_persons")]
     [Required]
     public int MaxOcupancyPersons { get; set; }

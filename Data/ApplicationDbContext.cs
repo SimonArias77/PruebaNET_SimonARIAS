@@ -14,11 +14,11 @@ public class ApplicationDbContext(DbContextOptions options) : DbContext(options)
 {
     // Properties of ApplicationDbContext to reference our Model classes.
 
-    public DbSet<Booking> Bookings { get; set; }
-    public DbSet<Employee> Employees { get; set; }
-    public DbSet<Guest> Guests { get; set; }
-    public DbSet<Room> Rooms { get; set; }
-    public DbSet<RoomType> RoomTypes { get; set; }
+    public DbSet<Booking>? Bookings { get; set; }
+    public DbSet<Employee>? Employees { get; set; }
+    public DbSet<Guest>? Guests { get; set; }
+    public DbSet<Room>? Rooms { get; set; }
+    public DbSet<RoomType>? RoomTypes { get; set; }
 
     // Constructor of ApplicationDbContext.
 

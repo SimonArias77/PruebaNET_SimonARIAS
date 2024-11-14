@@ -7,6 +7,7 @@ using PruebaNET_SimónArias.Config;
 using PruebaNET_SimónArias.DTOs.Requests;
 using PruebaNET_SimónArias.Models;
 using PruebaNET_SimónArias.Repositories;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace PruebaNET_SimónArias.Controllers.v1.Auth;
 
@@ -21,17 +22,13 @@ public class AuthController : ControllerBase
         services = employeeRepository;
     }
 
-    // method to generate a jwt
-    [HttpPost]
-    public async Task<IActionResult> GenerateToken(Employee employee)
-    {
-        var token = JWT.GenerateJwtToken(employee);
+   
 
-        return Ok($"acá está su token: {token}");
-    }
-
-    [HttpPost]
-    [Route("login")]
+    [HttpPost("login")]
+    [SwaggerOperation(
+            Summary = "Employee login",
+            Description = "Authenticates an employee using their email and password, returning a JWT token if successful."
+        )]
     public async Task<IActionResult> Login(LoginDto data)
     {
         var employee = await services.GetByEmail(data.Email);
@@ -45,12 +42,13 @@ public class AuthController : ControllerBase
         var token = JWT.GenerateJwtToken(employee);
 
         return Ok($"acá está su token: {token}");
-
-
     }
 
-    [HttpPost]
-    [Route("register")]
+    [HttpPost("register")]
+    [SwaggerOperation(
+            Summary = "Register a new employee",
+            Description = "Creates a new employee record after validating the provided information and ensuring the email is not already in use."
+        )]
     public async Task<IActionResult> Register(RegisterDto data)
     {
         var employee = await services.GetByEmail(data.Email);
@@ -71,7 +69,4 @@ public class AuthController : ControllerBase
 
         return Ok("Usuario registrado correctamente");
     }
-
-
-
 }

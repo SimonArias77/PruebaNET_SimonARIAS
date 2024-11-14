@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PruebaNET_SimónArias.Repositories;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace PruebaNET_SimónArias.Controllers.v1.Guests;
 
@@ -19,6 +20,10 @@ public class GuestsDeleteController : GuestsController
 
     [HttpDelete("{id}")]
     [Authorize]
+    [SwaggerOperation(
+            Summary = "Delete a guest",
+            Description = "Deletes a guest record identified by the provided ID."
+        )]
     public async Task<IActionResult> DeleteGuest(int id)
     {
         var guest = await services.GetById(id);

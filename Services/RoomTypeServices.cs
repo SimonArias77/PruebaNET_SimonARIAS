@@ -9,14 +9,9 @@ using PruebaNET_SimónArias.Repositories;
 
 namespace PruebaNET_SimónArias.Services;
 
-public class RoomTypeServices : IRoomTypeRepository
+public class RoomTypeServices(ApplicationDbContext context) : IRoomTypeRepository
 {
-    private readonly ApplicationDbContext _context;
-
-    public RoomTypeServices(ApplicationDbContext context)
-    {
-        _context = context;
-    }
+    private readonly ApplicationDbContext _context = context;
 
     public async Task Add(RoomType roomType)
     {

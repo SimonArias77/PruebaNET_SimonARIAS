@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PruebaNET_SimónArias")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f179deffe9cf0d27f1d816fa4a508649cad5b64c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+140a00ac3d701b3161ea5a393a0080e0d6ce15ce")]
 [assembly: System.Reflection.AssemblyProductAttribute("PruebaNET_SimónArias")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PruebaNET_SimónArias")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -9,10 +9,10 @@ namespace PruebaNET_SimónArias.Controllers.v1.Bookings;
 
     [ApiController]
     [Route("api/bookings")]
-    public class BookingsController : ControllerBase
+    public class BookingController : ControllerBase
     {
         protected readonly IBookingRepository services;
-        public BookingsController(IBookingRepository bookingRepository)
+        public BookingController(IBookingRepository bookingRepository)
         {
             services = bookingRepository;
         }

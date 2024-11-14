@@ -9,14 +9,9 @@ using PruebaNET_SimónArias.Repositories;
 
 namespace PruebaNET_SimónArias.Services;
 
-public class GuestServices : IGuestRepository
+public class GuestServices(ApplicationDbContext context) : IGuestRepository
 {
-    private readonly ApplicationDbContext _context;
-
-    public GuestServices(ApplicationDbContext context)
-    {
-        _context = context;
-    }
+    private readonly ApplicationDbContext _context = context;
 
     public async Task Add(Guest guest)
     {
@@ -52,6 +47,11 @@ public class GuestServices : IGuestRepository
     public async Task<Guest> GetById(int id)
     {
         return await _context.Guests.FindAsync(id);
+    }
+
+    public async Task<IEnumerable<Guest>> GetByKeyword(string keyword)
+    {
+        return await _context.Guests.Where(g => g.FirstName.Contains(keyword) || g.LastName.Contains(keyword)).ToListAsync();
     }
 
     public async Task Update(Guest guest)

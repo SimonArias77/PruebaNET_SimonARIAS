@@ -9,14 +9,9 @@ using PruebaNET_SimónArias.Repositories;
 
 namespace PruebaNET_SimónArias.Services
 {
-    public class BookingServices : IBookingRepository
+    public class BookingServices(ApplicationDbContext context) : IBookingRepository
     {
-        private readonly ApplicationDbContext _context;
-
-        public BookingServices(ApplicationDbContext context)
-        {
-            _context = context;
-        }
+        private readonly ApplicationDbContext _context = context;
 
         public async Task Add(Booking booking)
         {
