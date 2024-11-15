@@ -94,6 +94,11 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+builder.Services.AddSwaggerGen(c =>
+{
+    c.EnableAnnotations();
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -7687,19 +7687,19 @@
     ]
   },
   "packageFolders": {
-    "/home/riwip5-006/.nuget/packages/": {}
+    "C:\\Users\\SIMÓN ARIAS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/riwip5-006/C#/WEB API SERVICES/PruebaNET_SimonArias/PruebaNET_SimónArias.csproj",
+      "projectUniqueName": "C:\\Users\\SIMÓN ARIAS\\Documents\\SIMÓN\\RIWIIIIIiiiiiii\\RIWI\\DESARROLLO DE SOFTWARE\\C# Y .NET\\WEB API SERVICES\\PruebaNET_SimonArias\\PruebaNET_SimónArias.csproj",
       "projectName": "PruebaNET_SimónArias",
-      "projectPath": "/home/riwip5-006/C#/WEB API SERVICES/PruebaNET_SimonArias/PruebaNET_SimónArias.csproj",
-      "packagesPath": "/home/riwip5-006/.nuget/packages/",
-      "outputPath": "/home/riwip5-006/C#/WEB API SERVICES/PruebaNET_SimonArias/obj/",
+      "projectPath": "C:\\Users\\SIMÓN ARIAS\\Documents\\SIMÓN\\RIWIIIIIiiiiiii\\RIWI\\DESARROLLO DE SOFTWARE\\C# Y .NET\\WEB API SERVICES\\PruebaNET_SimonArias\\PruebaNET_SimónArias.csproj",
+      "packagesPath": "C:\\Users\\SIMÓN ARIAS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\SIMÓN ARIAS\\Documents\\SIMÓN\\RIWIIIIIiiiiiii\\RIWI\\DESARROLLO DE SOFTWARE\\C# Y .NET\\WEB API SERVICES\\PruebaNET_SimonArias\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/riwip5-006/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\SIMÓN ARIAS\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -7717,6 +7717,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -7777,7 +7782,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
